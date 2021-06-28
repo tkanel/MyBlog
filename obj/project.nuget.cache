@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uLYexTwHZZf8sXc1oo3v7lNdK3sFUL/N7QW6p96Hs4vtxlBe6izjR/OXFbh3vQ+t5XKmePiOHPg9efXv71vuRw==",
+  "dgSpecHash": "2/4tPimgvs7B4wb82YOO5PHWv4wYhXruwUg3xYlLSsvSmdnGk8T9MERse9IwQiUY4e+IYVwOiMXpn3XYhthjcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog\\MyBlog.csproj",
+  "projectFilePath": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tkane\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\tkane\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.7\\microsoft.aspnetcore.cryptography.internal.5.0.7.nupkg.sha512",

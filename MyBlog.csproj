@@ -31,7 +31,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\Attachments\" />
     <Folder Include="wwwroot\Media\" />
-    <Folder Include="wwwroot\Logs\" />
   </ItemGroup>
 
 </Project>

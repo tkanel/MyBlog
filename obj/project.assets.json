@@ -7893,11 +7893,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog\\MyBlog.csproj",
+      "projectUniqueName": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog.csproj",
       "projectName": "MyBlog",
-      "projectPath": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog\\MyBlog.csproj",
+      "projectPath": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog.csproj",
       "packagesPath": "C:\\Users\\tkane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tkane\\source\\Git\\MyBlog\\MyBlog\\obj\\",
+      "outputPath": "C:\\Users\\tkane\\source\\Git\\MyBlog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
