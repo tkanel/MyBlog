@@ -1,0 +1,414 @@
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:08:13 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Categories/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:08:19 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Blogs/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:08:20 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:08:20 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:08:21 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:08:22 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:09:01 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Blogs/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:09:05 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Blogs/Create
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:09:06 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"blog","Value":{"BlogId":0,"Name":"TEST","Posts":null}}
+URL :Blogs/Create
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:09:10 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Blogs/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 3:09:10 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:16:18 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:16:23 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:16:37 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:24:09 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:24:11 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:24:28 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:24:31 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:26:11 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:26:13 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:26:15 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:26:34 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:26:37 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:39:55 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:40:24 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:40:49 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:43:56 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:45:47 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:46:55 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:47:24 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:48:16 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:48:20 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:49:29 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:51:04 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Blogs/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:51:09 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:51:11 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:51:13 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:52:57 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:53:00 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:53:15 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:54:49 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:58:46 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 7:58:50 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:02:02 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:02:06 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:03:17 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:04:51 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:06:18 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:07:19 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:08:12 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:08:21 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:08:23 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:09:51 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:11:11 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:11:12 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:11:33 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:11:39 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:11:46 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:12:17 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:12:26 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:15:12 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:15:17 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:18:09 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:43:14 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:43:35 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:43:55 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Create
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:43:57 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"post","Value":{"Title":"My First Post 3","Body":"ςερςερςερςερ","CreatedOn":"2021-06-26T00:00:00","UnPublishOn":null,"Author":"tkanello@gmail.com","AttachmentName":{"ContentDisposition":"form-data; name=\"AttachmentName\"; filename=\"Κινήσεις Λογαριασμών_20210123.xlsx\"","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\"AttachmentName\"; filename=\"Κινήσεις Λογαριασμών_20210123.xlsx\""],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":35307,"Name":"AttachmentName","FileName":"Κινήσεις Λογαριασμών_20210123.xlsx"},"FeauturePhotoName":{"ContentDisposition":"form-data; name=\"FeauturePhotoName\"; filename=\"205747714_2548733095272550_3206568000504626083_n.jpg\"","ContentType":"image/jpeg","Headers":{"Content-Disposition":["form-data; name=\"FeauturePhotoName\"; filename=\"205747714_2548733095272550_3206568000504626083_n.jpg\""],"Content-Type":["image/jpeg"]},"Length":44920,"Name":"FeauturePhotoName","FileName":"205747714_2548733095272550_3206568000504626083_n.jpg"},"CategoryId":1,"BlogId":1,"Blog":null,"Category":null}}
+URL :Posts/Create
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:44:30 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :26/6/2021 8:44:30 μμ
+--------------------------------------------------------------------------

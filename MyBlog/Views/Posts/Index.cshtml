@@ -1,0 +1,136 @@
+﻿@model IEnumerable<MyBlog.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Posts list</h4>
+
+<p>
+    <a class="btn btn-info btn-sm" asp-action="Create">Create New</a>
+</p>
+
+
+<table class="table table-striped table-bordered table-sm table-hover">
+    <thead class="text-info text-center">
+        <tr>
+            <th>
+                <label>Title</label>
+
+            </th>
+            <th>
+                <label>Text</label>
+            <th>
+
+                <label>Creation day</label>
+            </th>
+            <th>
+                <label>UnPublish day</label>
+            </th>
+            <th>
+                <label>Author</label>
+            </th>
+            <th>
+                <label>Attachment</label>
+            </th>
+            <th>
+                <label>Photo</label>
+            </th>
+            <th>
+                <label>Blog</label>
+            </th>
+            <th>
+                <label>Category</label>
+            <th><label>Actions</label></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <label class="d-inline-block text-truncate" style="max-width: 80px;">@Html.DisplayFor(modelItem => item.Body)</label>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnPublishOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+
+
+                    @if (item.AttachmentName != null)
+                    {
+
+                        @if (item.AttachmentName.Contains("_"))
+                        {
+
+                            string attachmentFileName = item.AttachmentName.Remove(0, 37);
+                            string uniqueFileName = item.AttachmentName;
+
+                            <label class="d-inline-block text-truncate" style="max-width: 80px;">
+                                <a href='~/Attachments/@uniqueFileName' target="_blank">@attachmentFileName</a>
+                            </label>
+
+                        }
+                        else
+                        {
+
+                            <label class="d-inline-block text-truncate" style="max-width: 80px;">@Html.DisplayFor(modelItem => item.AttachmentName)</label>
+
+                        }
+
+                    }
+
+
+                </td>
+                <td>
+
+                    @if (item.FeauturePhotoName != null)
+                    {
+
+                        @if (item.FeauturePhotoName.Contains("_"))
+                        {
+
+
+                            string featurePhotoName = item.FeauturePhotoName.Remove(0, 37);
+                            string uniqueFeaturePhotoName = item.FeauturePhotoName;
+
+
+                            <a href='~/Media/@uniqueFeaturePhotoName' target="_blank"><img class="img-thumbnail" src='~/Media/@uniqueFeaturePhotoName' width='100' height='100' alt="@uniqueFeaturePhotoName" /></a>
+
+
+                        }
+                        else
+                        {
+
+                            @Html.DisplayFor(modelItem => item.FeauturePhotoName)
+
+                        }
+                    }
+
+
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Blog.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm" asp-action="Edit" asp-route-id="@item.PostId">Edit</a> 
+                    <a class="btn btn-primary btn-sm" asp-action="Details" asp-route-id="@item.PostId">Details</a> 
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.PostId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

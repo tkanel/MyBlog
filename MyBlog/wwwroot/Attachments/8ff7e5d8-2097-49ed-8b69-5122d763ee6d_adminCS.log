@@ -1,0 +1,78 @@
+------------------------------------------------------------------------
+Name      : adminCS
+Version   : 1.9.22.0
+Code Base : file:///C:/WINDOWS/assembly/GAC_MSIL/adminCS/1.9.22.0__ddb7c2ab70c6a687/adminCS.dll
+------------------------------------------------------------------------
+Name      : adminCS
+Version   : 1.9.22.0
+Code Base : file:///C:/WINDOWS/assembly/GAC_MSIL/adminCS/1.9.22.0__ddb7c2ab70c6a687/adminCS.dll
+------------------------------------------------------------------------
+[22/5/2020 12:01:52 μμ:309]CadminCentralServices Creation
+[22/5/2020 12:01:52 μμ:321]Building CadminCSMapper
+[22/5/2020 12:01:52 μμ:322]    (adminCS, Version=1.9.22.0, Culture=neutral, PublicKeyToken=ddb7c2ab70c6a687)
+[22/5/2020 12:01:52 μμ:323]    (file:///C:/WINDOWS/assembly/GAC_MSIL/adminCS/1.9.22.0__ddb7c2ab70c6a687/adminCS.dll)
+[22/5/2020 12:01:52 μμ:323]    (Framework .NET v4.0.30319.42000)
+[22/5/2020 12:01:53 μμ:620]Reading config file
+[22/5/2020 12:01:53 μμ:623]Failed to read config file. Default settings will be used
+[22/5/2020 12:01:53 μμ:623]-->Use Default Proxy : False
+[22/5/2020 12:01:53 μμ:624]-->ByPass Local Addr : False
+[22/5/2020 12:01:53 μμ:624]-->Customized Proxy  : False
+[22/5/2020 12:01:53 μμ:625]-->Proxy Address     : 127.0.0.1
+[22/5/2020 12:01:53 μμ:626]-->Proxy Port        : 3128
+[22/5/2020 12:01:53 μμ:628]SetConnectionParameters 192.168.200.222 443 0
+[22/5/2020 12:01:53 μμ:630]LoginAdmin installer
+[22/5/2020 12:01:53 μμ:631]Trying primary URL
+[22/5/2020 12:01:53 μμ:632]Using URL: https://192.168.200.222:443/services/xmlsrv/services/
+[22/5/2020 12:01:53 μμ:633]FakeGetOXOTime
+[22/5/2020 12:01:54 μμ:822]Login OK
+[22/5/2020 12:01:54 μμ:823]Session ID : 15901380843372
+[22/5/2020 12:01:54 μμ:824]UserExistsByNumber : 818
+[22/5/2020 12:01:57 μμ:182]The user 818 exists 
+[22/5/2020 12:01:57 μμ:183]LogoutAdmin
+[22/5/2020 12:01:57 μμ:264]Logout OK
+[22/5/2020 12:07:18 μμ:185]CadminCentralServices Creation
+[22/5/2020 12:07:18 μμ:186]Building CadminCSMapper
+[22/5/2020 12:07:18 μμ:187]    (adminCS, Version=1.9.22.0, Culture=neutral, PublicKeyToken=ddb7c2ab70c6a687)
+[22/5/2020 12:07:18 μμ:188]    (file:///C:/WINDOWS/assembly/GAC_MSIL/adminCS/1.9.22.0__ddb7c2ab70c6a687/adminCS.dll)
+[22/5/2020 12:07:18 μμ:188]    (Framework .NET v4.0.30319.42000)
+[22/5/2020 12:07:18 μμ:189]Reading config file
+[22/5/2020 12:07:18 μμ:189]Failed to read config file. Default settings will be used
+[22/5/2020 12:07:18 μμ:190]-->Use Default Proxy : False
+[22/5/2020 12:07:18 μμ:190]-->ByPass Local Addr : False
+[22/5/2020 12:07:18 μμ:191]-->Customized Proxy  : False
+[22/5/2020 12:07:18 μμ:191]-->Proxy Address     : 127.0.0.1
+[22/5/2020 12:07:18 μμ:192]-->Proxy Port        : 3128
+[22/5/2020 12:07:18 μμ:192]SetConnectionParameters 192.168.200.222 443 0
+[22/5/2020 12:07:18 μμ:193]LoginAdmin installer
+[22/5/2020 12:07:18 μμ:193]Trying primary URL
+[22/5/2020 12:07:18 μμ:194]Using URL: https://192.168.200.222:443/services/xmlsrv/services/
+[22/5/2020 12:07:18 μμ:194]FakeGetOXOTime
+[22/5/2020 12:07:18 μμ:819]Login OK
+[22/5/2020 12:07:18 μμ:820]Session ID : 15901384093373
+[22/5/2020 12:07:18 μμ:820]UserExistsByNumber : 855
+[22/5/2020 12:07:18 μμ:986]The user 855 exists 
+[22/5/2020 12:07:18 μμ:986]LogoutAdmin
+[22/5/2020 12:07:19 μμ:098]Logout OK
+[22/5/2020 12:15:48 μμ:975]CadminCentralServices Creation
+[22/5/2020 12:15:48 μμ:975]Building CadminCSMapper
+[22/5/2020 12:15:48 μμ:976]    (adminCS, Version=1.9.22.0, Culture=neutral, PublicKeyToken=ddb7c2ab70c6a687)
+[22/5/2020 12:15:48 μμ:977]    (file:///C:/WINDOWS/assembly/GAC_MSIL/adminCS/1.9.22.0__ddb7c2ab70c6a687/adminCS.dll)
+[22/5/2020 12:15:48 μμ:977]    (Framework .NET v4.0.30319.42000)
+[22/5/2020 12:15:48 μμ:978]Reading config file
+[22/5/2020 12:15:48 μμ:979]Failed to read config file. Default settings will be used
+[22/5/2020 12:15:48 μμ:979]-->Use Default Proxy : False
+[22/5/2020 12:15:48 μμ:980]-->ByPass Local Addr : False
+[22/5/2020 12:15:48 μμ:980]-->Customized Proxy  : False
+[22/5/2020 12:15:48 μμ:981]-->Proxy Address     : 127.0.0.1
+[22/5/2020 12:15:48 μμ:981]-->Proxy Port        : 3128
+[22/5/2020 12:15:48 μμ:982]SetConnectionParameters 192.168.200.222 443 0
+[22/5/2020 12:15:48 μμ:983]LoginAdmin installer
+[22/5/2020 12:15:48 μμ:983]Trying primary URL
+[22/5/2020 12:15:48 μμ:984]Using URL: https://192.168.200.222:443/services/xmlsrv/services/
+[22/5/2020 12:15:48 μμ:984]FakeGetOXOTime
+[22/5/2020 12:15:49 μμ:698]Login OK
+[22/5/2020 12:15:49 μμ:698]Session ID : 15901389193374
+[22/5/2020 12:15:49 μμ:699]UserExistsByNumber : 818
+[22/5/2020 12:15:49 μμ:907]The user 818 exists 
+[22/5/2020 12:15:49 μμ:908]LogoutAdmin
+[22/5/2020 12:15:49 μμ:944]Logout OK

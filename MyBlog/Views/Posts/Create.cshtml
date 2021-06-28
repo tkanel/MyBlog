@@ -1,0 +1,86 @@
+﻿
+@model MyBlog.ViewModels.PostCreateViewModel
+
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<h4>Create a new post</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form enctype="multipart/form-data" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Body" class="control-label"></label>
+                <textarea asp-for="Body" class="form-control"></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedOn" class="control-label"></label>
+                <input type="date" asp-for="CreatedOn" class="form-control" />
+                <span asp-validation-for="CreatedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnPublishOn" class="control-label"></label>
+                <input type="date" asp-for="UnPublishOn" class="form-control" />
+                <span asp-validation-for="UnPublishOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" value=@ViewBag.MyUser readonly />
+
+
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="AttachmentName" class="control-label"></label>
+                <input asp-for="AttachmentName" class="form-control" />
+                <span asp-validation-for="AttachmentName" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+
+                <label asp-for="FeauturePhotoName" class="control-label"></label>
+                <input asp-for="FeauturePhotoName" class="form-control" />
+                <span asp-validation-for="FeauturePhotoName" class="text-danger"></span>
+
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label">Select Category</label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">
+                    <option>Select a Category</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogId" class="control-label">Select Blog</label>
+                <select asp-for="BlogId" class="form-control" asp-items="ViewBag.BlogId">
+                    <option>Select a Blog</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
