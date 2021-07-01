@@ -119,6 +119,7 @@ namespace MyBlog.Controllers
         // GET: Blogs/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
             if (id == null)
             {
                 return NotFound();
@@ -126,6 +127,8 @@ namespace MyBlog.Controllers
 
             var blog = await _context.Blogs
                 .FirstOrDefaultAsync(m => m.BlogId == id);
+            ViewBag.Message = "Do you really want to delete this blog :" + blog.Name;
+
             if (blog == null)
             {
                 return NotFound();
@@ -139,10 +142,27 @@ namespace MyBlog.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var blog = await _context.Blogs.FindAsync(id);
-            _context.Blogs.Remove(blog);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var entries = _context.Blogs
+            .Where(o => o.BlogId == id)
+            .SelectMany(o => o.Posts)
+            .Count();
+            if (entries > 0)
+            {
+
+                ViewBag.CannotDeleteBlog = ($"This blog has {entries} posts in it so , you can't delete it");
+                ViewBag.Message = "";
+                return View("Delete");
+
+            }
+            else
+            {
+                var blog = await _context.Blogs.FindAsync(id);
+                _context.Blogs.Remove(blog);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+
+            }
+
         }
 
         private bool BlogExists(int id)

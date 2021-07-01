@@ -11,8 +11,8 @@ namespace MyBlog.ViewModels
 {
     public class PostCreateViewModel
     {
-       
-
+        [Required]
+        public int PostId { get; set; }
         [Required]
         public string Title { get; set; }
 
@@ -35,6 +35,10 @@ namespace MyBlog.ViewModels
         public string Author { get; set; }
 
         public IFormFile AttachmentName { get; set; }
+
+        public string CurrentAttachmentName { get; set; }
+
+        public string  CurrentFeaturePhotoName { get; set; }
 
         public IFormFile FeauturePhotoName { get; set; }
 

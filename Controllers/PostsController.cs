@@ -23,7 +23,7 @@ namespace MyBlog.Controllers
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _hostEnvironment;
 
-        public PostsController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment, UserManager<IdentityUser> userManager,ILogger<PostsController> logger)
+        public PostsController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment, UserManager<IdentityUser> userManager, ILogger<PostsController> logger)
         {
             _context = context;
             _hostEnvironment = hostEnvironment;
@@ -34,8 +34,8 @@ namespace MyBlog.Controllers
         // GET: Posts
         public async Task<IActionResult> Index()
         {
-            
-            
+
+
 
             var applicationDbContext = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn);
             return View(await applicationDbContext.ToListAsync());
@@ -68,7 +68,7 @@ namespace MyBlog.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "Name");
             ViewData["CreatedOn"] = DateTime.Now;
 
-            var user =await _userManager.GetUserAsync(HttpContext.User);
+            var user = await _userManager.GetUserAsync(HttpContext.User);
             ViewBag.MyUser = user.UserName;
 
 
@@ -160,13 +160,35 @@ namespace MyBlog.Controllers
             }
 
             var post = await _context.Posts.FindAsync(id);
+
             if (post == null)
             {
                 return NotFound();
             }
+
+            var viewModelPost = new PostCreateViewModel()
+            {
+                PostId = post.PostId,
+                Title = post.Title,
+                Body = post.Body,
+                CreatedOn = post.CreatedOn,
+                UnPublishOn = post.UnPublishOn,
+                Author = post.Author,
+                CurrentAttachmentName = post.AttachmentName,
+                CurrentFeaturePhotoName = post.FeauturePhotoName,
+                BlogId = post.BlogId,
+                Blog = post.Blog
+
+
+
+            };
+
+
             ViewData["BlogId"] = new SelectList(_context.Blogs, "BlogId", "Name", post.BlogId);
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "Name", post.CategoryId);
-            return View(post);
+
+
+            return View(viewModelPost);
         }
 
         // POST: Posts/Edit/5
@@ -174,7 +196,7 @@ namespace MyBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Body,CreatedOn,UnPublishOn,Author,CategoryId,BlogId,AttachmentName")] Post post)
+        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Body,CreatedOn,UnPublishOn,Author,AttachmentName,FeauturePhotoName,CategoryId,BlogId,AttachmentName")] PostCreateViewModel post)
         {
             if (id != post.PostId)
             {
@@ -185,8 +207,71 @@ namespace MyBlog.Controllers
             {
                 try
                 {
+
+                    string uniqueFeaturePhotoName = null;
+                    string uniqueFileName = null;
+
+
+                    //Attachement
+
+                    if (post.AttachmentName != null)
+                    {
+                        //copy file to Attachments folder
+                        string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "Attachments");
+                        uniqueFileName = Guid.NewGuid().ToString() + "_" + post.AttachmentName.FileName;
+                        string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                        post.AttachmentName.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                    }
+                    else
+                    {
+
+                        uniqueFileName = "no attachement";
+                    }
+
+                    //Feature photo
+
+                    if (post.FeauturePhotoName != null)
+                    {
+                        //copy feature photo to Media folder
+                        string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "Media");
+                        uniqueFeaturePhotoName = Guid.NewGuid().ToString() + "_" + post.FeauturePhotoName.FileName;
+                        string filePath = Path.Combine(uploadsFolder, uniqueFeaturePhotoName);
+                        post.FeauturePhotoName.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                    }
+                    else
+                    {
+
+                        uniqueFeaturePhotoName = "no feature photo";
+                    }
+
+
+
+                    Post newPost = new Post()
+                    {
+
+                        Title = post.Title,
+                        Body = post.Body,
+                        CreatedOn = post.CreatedOn,
+                        UnPublishOn = post.UnPublishOn,
+                        Author = post.Author,
+                        AttachmentName = uniqueFileName,
+                        FeauturePhotoName = uniqueFeaturePhotoName,
+                        CategoryId = post.CategoryId,
+                        BlogId = post.BlogId
+
+
+
+                    };
+
+
                     _context.Update(post);
                     await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+
+                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -196,14 +281,16 @@ namespace MyBlog.Controllers
                     }
                     else
                     {
-                        throw;
+                        return View(post);
                     }
+
+                    
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
             ViewData["BlogId"] = new SelectList(_context.Blogs, "BlogId", "Name", post.BlogId);
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "Name", post.CategoryId);
-            return View(post);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Posts/Delete/5

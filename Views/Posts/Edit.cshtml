@@ -1,4 +1,4 @@
-﻿@model MyBlog.Models.Post
+﻿@model MyBlog.ViewModels.PostCreateViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -24,12 +24,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="CreatedOn" class="control-label"></label>
-                <input  type="date" asp-for="CreatedOn" class="form-control" />
+                <input type="date" asp-for="CreatedOn" class="form-control" />
                 <span asp-validation-for="CreatedOn" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="UnPublishOn" class="control-label"></label>
-                <input  type="date" asp-for="UnPublishOn" class="form-control" />
+                <input type="date" asp-for="UnPublishOn" class="form-control" />
                 <span asp-validation-for="UnPublishOn" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -37,6 +37,24 @@
                 <input asp-for="Author" class="form-control" />
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+
+                <label asp-for="AttachmentName" class="control-label"></label>
+                <input asp-for="AttachmentName" class="form-control" />
+                <text><i>**Current file name : </i></text><b><text class="control-label">@Model.CurrentAttachmentName</text></b>
+                <span asp-validation-for="AttachmentName" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+
+                <label asp-for="FeauturePhotoName" class="control-label"></label>
+                <input asp-for="FeauturePhotoName" class="form-control" />
+                <text><i>**Current photo name : </i></text><b><text  class="control-label">@Model.CurrentFeaturePhotoName</text></b>
+                <span asp-validation-for="FeauturePhotoName" class="text-danger"></span>
+
+            </div>
+
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
                 <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">

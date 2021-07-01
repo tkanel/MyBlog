@@ -126,6 +126,10 @@ namespace MyBlog.Controllers
 
             var category = await _context.Category
                 .FirstOrDefaultAsync(m => m.CategoryId == id);
+
+            ViewBag.Message = "Do you really want to delete this category : " + category.Name;
+
+
             if (category == null)
             {
                 return NotFound();
@@ -139,10 +143,32 @@ namespace MyBlog.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Category.FindAsync(id);
-            _context.Category.Remove(category);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var entries = _context.Category
+            .Where(o => o.CategoryId == id)
+            .SelectMany(o => o.Posts)
+            .Count();
+
+            if (entries > 0)
+            {
+
+                ViewBag.CannotDeleteCategory = ($"This category has {entries} posts in it so, you cannot delete it");
+                ViewBag.Message = "";
+                return View("Delete");
+
+            }
+            else
+            {
+
+                var category = await _context.Category.FindAsync(id);
+                _context.Category.Remove(category);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+
+
+            }
+
+
+
         }
 
         private bool CategoryExists(int id)
