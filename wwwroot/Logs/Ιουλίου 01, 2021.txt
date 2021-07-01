@@ -1132,3 +1132,51 @@ UserName :tkanello@gmail.com
 IP Address :::1
 Date :1/7/2021 5:07:49 μμ
 --------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:40:18 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Edit
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:40:24 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:40:42 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:40:43 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:40:59 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Details
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:41:03 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Posts/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:55:44 μμ
+--------------------------------------------------------------------------
+Data :{"Key":"id","Value":1}
+URL :Posts/Edit
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :1/7/2021 9:55:54 μμ
+--------------------------------------------------------------------------
