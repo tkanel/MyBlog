@@ -210,8 +210,8 @@ namespace MyBlog.Controllers
                 try
                 {
 
-                    string uniqueFeaturePhotoName = null;
-                    string uniqueFileName = null;
+                    string uniqueFeaturePhotoName=null;
+                    string uniqueFileName=null;
 
 
                     //Attachement
@@ -236,10 +236,10 @@ namespace MyBlog.Controllers
                     if (post.FeauturePhotoName != null)
                     {
                         //copy feature photo to Media folder
-                        string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "Media");
+                        string uploadsPhotoFolder = Path.Combine(_hostEnvironment.WebRootPath, "Media");
                         uniqueFeaturePhotoName = Guid.NewGuid().ToString() + "_" + post.FeauturePhotoName.FileName;
-                        string filePath = Path.Combine(uploadsFolder, uniqueFeaturePhotoName);
-                        post.FeauturePhotoName.CopyTo(new FileStream(filePath, FileMode.Create));
+                        string PhotoPath = Path.Combine(uploadsPhotoFolder, uniqueFeaturePhotoName);
+                        post.FeauturePhotoName.CopyTo(new FileStream(PhotoPath, FileMode.Create));
 
                     }
                     else
@@ -249,27 +249,28 @@ namespace MyBlog.Controllers
                     }
 
 
+                    //FIND POST
 
-                    //Post newPost = new Post()
-                    //{
+                    var selectedPost = await _context.Posts.FindAsync(id);
 
-                    //    Title = post.Title,
-                    //    Body = post.Body,
-                    //    CreatedOn = post.CreatedOn,
-                    //    UnPublishOn = post.UnPublishOn,
-                    //    Author = post.Author,
-                    //    AttachmentName = uniqueFileName,
-                    //    FeauturePhotoName = uniqueFeaturePhotoName,
-                    //    CategoryId = post.CategoryId,
-                    //    BlogId = post.BlogId
+                    //UPDATE POST           
+                    selectedPost.Title = post.Title;
+                    selectedPost.Body = post.Body;
+                    selectedPost.CreatedOn = post.CreatedOn;
+                    selectedPost.UnPublishOn = post.UnPublishOn;
+                    selectedPost.Author = post.Author;
+                    selectedPost.AttachmentName = uniqueFileName;
+                    selectedPost.FeauturePhotoName = uniqueFeaturePhotoName;
+                    selectedPost.CategoryId = post.CategoryId;
+                    selectedPost.BlogId = post.BlogId;
 
-
-
-                    //};
-
-
-                    _context.Update(post);
+                                        
+                    _context.Update(selectedPost);
                     await _context.SaveChangesAsync();
+
+
+
+
 
                     return RedirectToAction(nameof(Index));
 
@@ -285,8 +286,7 @@ namespace MyBlog.Controllers
                     {
                         return View(post);
                     }
-
-                    
+                                        
                 }
                 
             }
