@@ -250,22 +250,22 @@ namespace MyBlog.Controllers
 
 
 
-                    Post newPost = new Post()
-                    {
+                    //Post newPost = new Post()
+                    //{
 
-                        Title = post.Title,
-                        Body = post.Body,
-                        CreatedOn = post.CreatedOn,
-                        UnPublishOn = post.UnPublishOn,
-                        Author = post.Author,
-                        AttachmentName = uniqueFileName,
-                        FeauturePhotoName = uniqueFeaturePhotoName,
-                        CategoryId = post.CategoryId,
-                        BlogId = post.BlogId
+                    //    Title = post.Title,
+                    //    Body = post.Body,
+                    //    CreatedOn = post.CreatedOn,
+                    //    UnPublishOn = post.UnPublishOn,
+                    //    Author = post.Author,
+                    //    AttachmentName = uniqueFileName,
+                    //    FeauturePhotoName = uniqueFeaturePhotoName,
+                    //    CategoryId = post.CategoryId,
+                    //    BlogId = post.BlogId
 
 
 
-                    };
+                    //};
 
 
                     _context.Update(post);
