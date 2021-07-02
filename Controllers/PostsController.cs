@@ -177,7 +177,9 @@ namespace MyBlog.Controllers
                 CurrentAttachmentName = post.AttachmentName,
                 CurrentFeaturePhotoName = post.FeauturePhotoName,
                 BlogId = post.BlogId,
-                Blog = post.Blog
+                Blog = post.Blog,
+                CategoryId=post.CategoryId,
+                Category=post.Category
 
 
 
