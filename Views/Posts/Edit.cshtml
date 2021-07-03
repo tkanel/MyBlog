@@ -12,6 +12,8 @@
         <form enctype="multipart/form-data" asp-action="Edit" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="PostId" />
+            <input type="hidden" asp-for="CurrentAttachmentName" />
+            <input type="hidden" asp-for="CurrentFeaturePhotoName" />
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -50,7 +52,7 @@
 
                 <label asp-for="FeauturePhotoName" class="control-label"></label>
                 <input asp-for="FeauturePhotoName" class="form-control" />
-                <text><i>**Current photo name : </i></text><b><text  class="control-label">@Model.CurrentFeaturePhotoName</text></b>
+                <text><i>**Current photo name : </i></text><b><text class="control-label">@Model.CurrentFeaturePhotoName</text></b>
                 <span asp-validation-for="FeauturePhotoName" class="text-danger"></span>
 
             </div>

@@ -198,7 +198,7 @@ namespace MyBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Body,CreatedOn,UnPublishOn,Author,AttachmentName,FeauturePhotoName,CategoryId,BlogId,AttachmentName")] PostCreateViewModel post)
+        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Body,CreatedOn,UnPublishOn,Author,AttachmentName,FeauturePhotoName,CurrentAttachmentName,CurrentFeaturePhotoName,CategoryId,BlogId")] PostCreateViewModel post)
         {
             if (id != post.PostId)
             {
@@ -228,7 +228,7 @@ namespace MyBlog.Controllers
                     else
                     {
 
-                        uniqueFileName = "no attachement";
+                        uniqueFileName = post.CurrentAttachmentName;
                     }
 
                     //Feature photo
@@ -245,7 +245,7 @@ namespace MyBlog.Controllers
                     else
                     {
 
-                        uniqueFeaturePhotoName = "no feature photo";
+                        uniqueFeaturePhotoName =post.CurrentFeaturePhotoName;
                     }
 
 
