@@ -2205,7 +2205,6 @@ C:\Users\tkane\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win-x64\native\e_sqli
 C:\Users\tkane\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\tkane\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\tkane\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.AssemblyInfoInputs.cache
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.AssemblyInfo.cs
@@ -2291,3 +2290,4 @@ C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.dll
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\ref\MyBlog.dll
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.pdb
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.genruntimeconfig.cache
+C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache

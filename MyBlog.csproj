@@ -33,4 +33,14 @@
     <Folder Include="wwwroot\Media\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <None Include="wwwroot\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
 </Project>
