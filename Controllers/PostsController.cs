@@ -41,6 +41,18 @@ namespace MyBlog.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
+
+        // GET: Query Posts
+        public async Task<IActionResult> QueryPosts(int id)
+        {
+
+            var applicationDbContext = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn).Where(p=>p.CategoryId==id);
+            
+            
+            return View("Index",await applicationDbContext.ToListAsync());
+        }
+
+
         // GET: Posts/Details/5
         public async Task<IActionResult> Details(int? id)
         {

@@ -97,7 +97,7 @@
                                     string featurePhotoName = item.FeauturePhotoName.Remove(0, 37);
                                     string uniqueFeaturePhotoName = item.FeauturePhotoName;
 
-                                    <img class="img-fluid" src='~/Media/@uniqueFeaturePhotoName' alt="@uniqueFeaturePhotoName" style="width:500px;height:300px" />                                }
+                                    <img class="img-fluid" src='~/Media/@uniqueFeaturePhotoName' alt="@uniqueFeaturePhotoName" style="width:500px;height:300px" /> }
                                 else
                                 {
                                     @Html.DisplayFor(modelItem => item.FeauturePhotoName)
@@ -110,10 +110,22 @@
                         <h2 class="tm-pt-30 tm-color-primary tm-post-title">@item.Title</h2>
                     </a>
                     <p class="tm-pt-30">
-                        @item.Body.Substring(0, 250)<a href="#"><i>......read more</i></a>
+
+                        @* Post summary *@
+                        @if (item.Body.Length < 250)
+                        {
+                            @item.Body<a asp-controller="Posts" asp-action="Details" asp-route-id="@item.PostId">......read more</a>
+
+                        }
+                        else
+                        {
+
+                            @item.Body.Substring(0, 250)<a asp-controller="Posts" asp-action="Details" asp-route-id="@item.PostId">......read more</a>
+                        }
+
                     </p>
                     <div class="d-flex justify-content-between tm-pt-45">
-                        <span class="tm-color-primary">Category : @item.Category.Name</span>
+                        <span class="tm-color-primary">Category : <a asp-controller="Posts" asp-action="QueryPosts" asp-route-CategoryId="@item.CategoryId">@item.Category.Name</a></span>
                         <span asp-format="{0:dd'/'MM'/'yyyy}" class="tm-color-primary">@item.CreatedOn.Value.ToString("dd MMM yyyy")</span>
                     </div>
                     <hr>
