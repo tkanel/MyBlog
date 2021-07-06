@@ -316,3 +316,63 @@ UserName :tkanello@gmail.com
 IP Address :::1
 Date :6/7/2021 5:25:09 μμ
 --------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:26:38 μμ
+--------------------------------------------------------------------------
+Data :?CategoryId=6
+URL :Posts/QueryPosts
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:26:43 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:28:14 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:30:27 μμ
+--------------------------------------------------------------------------
+Data :?CategoryId=6
+URL :Posts/QueryPosts
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:30:38 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:31:01 μμ
+--------------------------------------------------------------------------
+Data :?CategoryId=7
+URL :Posts/QueryPosts
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:31:04 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:31:07 μμ
+--------------------------------------------------------------------------
+Data :?CategoryId=5
+URL :Posts/QueryPosts
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:31:10 μμ
+--------------------------------------------------------------------------
+Data :{"Key":null,"Value":null}
+URL :Home/Index
+UserName :tkanello@gmail.com
+IP Address :::1
+Date :6/7/2021 5:31:11 μμ
+--------------------------------------------------------------------------

@@ -42,11 +42,12 @@ namespace MyBlog.Controllers
         }
 
 
-        // GET: Query Posts
-        public async Task<IActionResult> QueryPosts(int id)
+        // Query Posts
+        [HttpGet]
+        public async Task<IActionResult> QueryPosts(int CategoryId)
         {
 
-            var applicationDbContext = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn).Where(p=>p.CategoryId==id);
+            var applicationDbContext = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn).Where(p=>p.CategoryId==CategoryId);
             
             
             return View("Index",await applicationDbContext.ToListAsync());
