@@ -40,6 +40,33 @@ namespace MyBlog.Controllers
             return View(await PaginatedList<Post>.CreateAsync(db.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
+
+        // GET: Posts/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var post = await _context.Posts
+                .Include(p => p.Blog)
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(m => m.PostId == id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            return View(post);
+        }
+
+
+
+
+
+
+
         public IActionResult Privacy()
         {
             return View();

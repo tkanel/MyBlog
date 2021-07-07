@@ -10,7 +10,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="tm-site-header">
-            <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+            @*<div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>*@
             <h1 class="text-center">iBlog v 1.0</h1>
         </div>
         <nav class="tm-nav" id="tm-nav">
@@ -114,7 +114,7 @@
                         @* Post summary *@
                         @if (item.Body.Length < 250)
                         {
-                            @item.Body<a asp-controller="Posts" asp-action="Details" asp-route-id="@item.PostId">......read more</a>
+                            @item.Body<a asp-controller="Home" asp-action="Details" asp-route-id="@item.PostId">......read more</a>
 
                         }
                         else
@@ -147,25 +147,25 @@
             }
 
             <div class="row tm-row tm-mt-100 tm-mb-75">
-               
-                    <a asp-action="Index"
-                       asp-route-pageNumber="@(Model.PageIndex - 1)"
-                       class="mb-2 tm-btn tm-btn-primary tm-prev-next @prevDisabled">
-                        Previous
-                    </a>
-                    <a asp-action="Index"
-                       asp-route-pageNumber="@(Model.PageIndex + 1)"
-                       class="mb-2 tm-btn tm-btn-primary tm-prev-next @nextDisabled">
-                        Next
-                    </a>
-               
+
+                <a asp-action="Index"
+                   asp-route-pageNumber="@(Model.PageIndex - 1)"
+                   class="mb-2 tm-btn tm-btn-primary tm-prev-next @prevDisabled">
+                    Previous
+                </a>
+                <a asp-action="Index"
+                   asp-route-pageNumber="@(Model.PageIndex + 1)"
+                   class="mb-2 tm-btn tm-btn-primary tm-prev-next @nextDisabled">
+                    Next
+                </a>
+
             </div>
 
             @*END OF POSTS FOREACH*@
 
 
 
-
+        </div>
     </main>
 </div>
 
