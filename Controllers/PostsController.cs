@@ -18,6 +18,8 @@ namespace MyBlog.Controllers
     [Authorize]
     public class PostsController : Controller
     {
+        //Field for paging size for Posts
+        public static int pageSize = 10;
         private readonly ILogger<PostsController> _logger;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
@@ -32,25 +34,41 @@ namespace MyBlog.Controllers
         }
 
         // GET: Posts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
 
 
+            
+            var db = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn);
 
-            var applicationDbContext = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn);
-            return View(await applicationDbContext.ToListAsync());
+            //return View(await applicationDbContext.ToListAsync());
+            return View(await PaginatedList<Post>.CreateAsync(db.AsNoTracking(), pageNumber ?? 1, pageSize));
+
         }
 
+        
 
-        // Query Posts
+
+        // Query Posts by Category
         [HttpGet]
-        public async Task<IActionResult> QueryPosts(int CategoryId)
+        public async Task<IActionResult> QueryPostsByCategory(int CategoryId, int? pageNumber)
         {
+           
+            var db = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn).Where(p=>p.CategoryId==CategoryId);
+            
+            
+            return View("Index", await PaginatedList<Post>.CreateAsync(db.AsNoTracking(), pageNumber ?? 1, pageSize));
+        }
 
-            var applicationDbContext = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn).Where(p=>p.CategoryId==CategoryId);
-            
-            
-            return View("Index",await applicationDbContext.ToListAsync());
+        // Query Posts by Blog
+        [HttpGet]
+        public async Task<IActionResult> QueryPostsByBlog(int BlogId, int? pageNumber)
+        {
+           
+            var db = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn).Where(p => p.BlogId == BlogId);
+
+
+            return View("Index", await PaginatedList<Post>.CreateAsync(db.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
 
@@ -338,6 +356,30 @@ namespace MyBlog.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+
+
+        //PAGING METHOD
+        private PostCreateViewModel GetPosts(int currentPage)
+        {
+            int maxRows = 10;
+            PostCreateViewModel postsModel = new PostCreateViewModel();
+
+            postsModel.Posts = (from post in this._context.Posts
+                                       select post)
+                        .OrderBy(p => p.PostId)
+                        .Skip((currentPage - 1) * maxRows)
+                        .Take(maxRows).ToList();
+
+            double pageCount = (double)((decimal)this._context.Posts.Count() / Convert.ToDecimal(maxRows));
+            postsModel.PageCount = (int)Math.Ceiling(pageCount);
+
+            postsModel.CurrentPageIndex = currentPage;
+
+            return postsModel;
+        }
+
+
 
 
 
