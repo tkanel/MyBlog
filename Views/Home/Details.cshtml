@@ -1,0 +1,76 @@
+﻿@model MyBlog.Models.Post
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_FrontEndLayout.cshtml";
+}
+
+
+
+<div>
+    
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UnPublishOn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UnPublishOn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AttachmentName)
+        </dt>
+        <dd class = "col-sm-10">
+            <label><b><i><a href="~/Attachments/@Model.AttachmentName" target="_blank">@Model.AttachmentName.Remove(0, 37)</a></i></b></label>
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FeauturePhotoName)
+        </dt>
+        <dd class = "col-sm-10">
+            <label><b><i><a href="~/Media/@Model.FeauturePhotoName" target="_blank">@Model.FeauturePhotoName.Remove(0, 37)</a></i></b></label>
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Blog)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Blog.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+    </dl>
+</div>
+
+<div class="btn btn-dark">Feature Photo :</div>
+<hr />
+<div style="width:fit-content;height:fit-content;padding-bottom:50px;"><img class="img-fluid" style="border:4px double black;max-width:100%;height:auto;" src="~/Media/@Model.FeauturePhotoName"   /></div>
+<div style="margin-bottom:50px">
+    <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

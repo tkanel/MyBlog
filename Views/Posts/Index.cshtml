@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyBlog.Models.Post>
+﻿@model PaginatedList<MyBlog.Models.Post>
 
 @{
     ViewData["Title"] = "Index";
@@ -126,11 +126,36 @@
                     @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
-                    <a class="btn btn-info btn-sm" asp-action="Edit" asp-route-id="@item.PostId">Edit</a> 
-                    <a class="btn btn-primary btn-sm" asp-action="Details" asp-route-id="@item.PostId">Details</a> 
+                    <a class="btn btn-info btn-sm" asp-action="Edit" asp-route-id="@item.PostId">Edit</a>
+                    <a class="btn btn-primary btn-sm" asp-action="Details" asp-route-id="@item.PostId">Details</a>
                     <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.PostId">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+@*PAGING*@
+
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+  
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+
+

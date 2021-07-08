@@ -15,6 +15,8 @@ namespace MyBlog.Controllers
 {
     public class HomeController : Controller
     {
+        //Field for paging size for Posts in Home Page
+        public static int pageSize = 10;
         private readonly ILogger<PostsController> _logger;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
@@ -29,12 +31,41 @@ namespace MyBlog.Controllers
         }
 
         // GET: Posts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
+            
+            var db = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn);
+            //return View(await postsData.ToListAsync());
 
-            var postsData = _context.Posts.Include(p => p.Blog).Include(p => p.Category).OrderByDescending(p => p.CreatedOn);
-            return View(await postsData.ToListAsync());
+            return View(await PaginatedList<Post>.CreateAsync(db.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
+
+
+        // GET: Posts/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var post = await _context.Posts
+                .Include(p => p.Blog)
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(m => m.PostId == id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            return View(post);
+        }
+
+
+
+
+
+
 
         public IActionResult Privacy()
         {

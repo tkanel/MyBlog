@@ -13,8 +13,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family:'Segoe UI';
+    font-family: 'Segoe UI';
     font-size: 14px;
     line-height: 2em;
     overflow-x: hidden;
@@ -43,7 +42,7 @@ hr {
 }
 
 .tm-header {
-    background-color: #0CC;
+    background-color: #cc0091;
     color: white;
     position: fixed;
     top: 0;
@@ -124,7 +123,7 @@ hr {
 
 .tm-nav-item:hover .tm-nav-link,
 .tm-nav-item.active .tm-nav-link {
-    color: #0CC;
+    color: #cc0091;
     background-color: white;
     text-decoration: none;
 }
@@ -173,7 +172,7 @@ ul {
 }
 
 .tm-social-icon {
-    color: #0CC;
+    color: #cc0091;
     transition: all 0.3s ease;
 }
 
@@ -217,12 +216,12 @@ ul {
     width: 60px;
     height: 60px;
     border: none;
-    background-color: #0CC;
+    background-color: #cc0091;
     transition: all 0.3s ease;
 }
 
     .tm-search-button:hover {
-        background-color: #09b6b6;
+        background-color: #f95ecc;
     }
 
 .tm-search-icon {
@@ -276,7 +275,7 @@ ul {
 .tm-new-badge {
     top: 25px;
     right: -10px;
-    background-color: #0CC;
+    background-color: #cc0091;
     color: white;
     padding: 5px 20px;
 }
@@ -292,7 +291,7 @@ ul {
 }
 
 .tm-post-link:hover .tm-post-title {
-    color: #0CC;
+    color: #df48fb;
 }
 
 .tm-btn {
@@ -378,7 +377,7 @@ ul {
 
 /* Single Post page */
 hr.tm-hr-primary {
-    border-top: 5px solid #0CC;
+    border-top: 5px solid #cc0091;
 }
 
 video {
@@ -493,7 +492,7 @@ figcaption {
 }
 
 .tm-color-primary, span.tm-color-primary {
-    color: #099;
+    color: #cc0091;
 }
 
 a.tm-color-gray, .tm-color-gray {

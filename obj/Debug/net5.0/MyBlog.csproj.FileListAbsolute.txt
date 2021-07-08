@@ -1691,7 +1691,6 @@ C:\Users\Thodoris\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win-x64\native\e_s
 C:\Users\Thodoris\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Thodoris\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Thodoris\source\Git\MyBlog\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache
 C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.AssemblyInfoInputs.cache
 C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.AssemblyInfo.cs
@@ -2291,3 +2290,6 @@ C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\ref\MyBlog.dll
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.pdb
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.genruntimeconfig.cache
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache
+C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache
+C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\Razor\Views\Shared\_FrontEndLayout.cshtml.g.cs
+C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
