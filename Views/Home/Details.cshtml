@@ -2,67 +2,10 @@
 
 @{
     ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_FrontEndLayout.cshtml";
 }
 
-<div class="tm-header" id="tm-header">
-    <div class="tm-header-wrapper" style="padding-top:120px">
-        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="tm-site-header">
-            @*<div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>*@
-            <h1 class="text-center">iBlog v 1.0</h1>
-        </div>
-        <nav class="tm-nav" id="tm-nav">
-            <ul>
-                <li class="tm-nav-item active">
-                    <a asp-controller="Home" asp-action="Index" class="tm-nav-link">
-                        <i class="fas fa-home"></i>
-                        Blog Home
-                    </a>
-                </li>
-                <li class="tm-nav-item">
-                    <a asp-controller="Blogs" asp-action="Index" class="tm-nav-link">
-                        <i class="fas fa-pen"></i>
-                        Blogs
-                    </a>
-                </li>
-                <li class="tm-nav-item">
-                    <a asp-controller="Categories" asp-action="Index" class="tm-nav-link">
-                        <i class="fas fa-users"></i>
-                        Categories
-                    </a>
-                </li>
-                <li class="tm-nav-item">
-                    <a href="contact.html" class="tm-nav-link">
-                        <i class="far fa-comments"></i>
-                        Contact Us
-                    </a>
-                </li>
-            </ul>
-        </nav>
 
-
-        @*SOCIAL*@
-        <div class="tm-mb-65">
-            <a rel="nofollow" href="https://fb.com/templatemo" class="tm-social-link">
-                <i class="fab fa-facebook tm-social-icon"></i>
-            </a>
-            <a href="https://twitter.com" class="tm-social-link">
-                <i class="fab fa-twitter tm-social-icon"></i>
-            </a>
-            <a href="https://instagram.com" class="tm-social-link">
-                <i class="fab fa-instagram tm-social-icon"></i>
-            </a>
-            <a href="https://linkedin.com" class="tm-social-link">
-                <i class="fab fa-linkedin tm-social-icon"></i>
-            </a>
-        </div>
-        <p class="tm-mb-80 pr-5 text-white">
-            iBlog is a modern CMS system powered by .Net Core 5 MVC
-        </p>
-    </div>
-</div>
 
 <div>
     
@@ -101,13 +44,13 @@
             @Html.DisplayNameFor(model => model.AttachmentName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AttachmentName)
+            <label><b><i><a href="~/Attachments/@Model.AttachmentName" target="_blank">@Model.AttachmentName.Remove(0, 37)</a></i></b></label>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.FeauturePhotoName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FeauturePhotoName)
+            <label><b><i><a href="~/Media/@Model.FeauturePhotoName" target="_blank">@Model.FeauturePhotoName.Remove(0, 37)</a></i></b></label>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Blog)
@@ -123,7 +66,11 @@
         </dd>
     </dl>
 </div>
-<div>
+
+<div class="btn btn-dark">Feature Photo :</div>
+<hr />
+<div style="width:fit-content;height:fit-content;padding-bottom:50px;"><img class="img-fluid" style="border:4px double black;max-width:100%;height:auto;" src="~/Media/@Model.FeauturePhotoName"   /></div>
+<div style="margin-bottom:50px">
     <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

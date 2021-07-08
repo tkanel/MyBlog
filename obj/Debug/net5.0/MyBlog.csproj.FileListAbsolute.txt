@@ -2291,4 +2291,5 @@ C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.pdb
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.genruntimeconfig.cache
 C:\Users\tkane\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache
 C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\MyBlog.csproj.AssemblyReference.cache
+C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\Razor\Views\Shared\_FrontEndLayout.cshtml.g.cs
 C:\Users\Thodoris\source\Git\MyBlog\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
